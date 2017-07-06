@@ -11,6 +11,7 @@ pipeline {
         parallel(
           "Test": {
             echo 'Main Test'
+            bat(script: 'system.exit(1)', encoding: 'UTF-8')
             
           },
           "Unit": {
