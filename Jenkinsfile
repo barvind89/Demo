@@ -32,7 +32,7 @@ pipeline {
     }
     stage('Deploy') {
       steps {
-        node(label: 'Any')
+        node(label: 'master')
         echo 'Deployed'
       }
     }
