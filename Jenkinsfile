@@ -28,7 +28,7 @@ pipeline {
       steps {
         echo 'Comprehensive Coverity Scan'
         waitUntil() {
-          input 'Scan Successful ?'
+          input(message: 'Scan Successful ?', ok: 'Approved')
         }
         
       }
