@@ -27,10 +27,7 @@ pipeline {
     stage('Static Analysis') {
       steps {
         echo 'Comprehensive Coverity Scan'
-        waitUntil() {
-          input(message: 'Scan Successful ?', ok: 'Approved')
-        }
-        
+        input 'Scan Successful ?'
       }
     }
     stage('Deploy') {
