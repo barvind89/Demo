@@ -32,8 +32,10 @@ pipeline {
     }
     stage('Deploy') {
       steps {
-        node(label: 'master')
-        echo 'Deployed'
+        node(label: 'master') {
+          echo 'Deployed'
+        }
+        
       }
     }
   }
